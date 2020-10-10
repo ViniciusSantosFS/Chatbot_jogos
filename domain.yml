@@ -1,0 +1,68 @@
+intents:
+  - saudar
+  - solicitar
+  - negar
+  - confirmar
+  - despedir
+  - confirmar_pedido
+entities:
+  - jogo
+  - num_na_lista
+
+actions:
+  - utter_saudar
+  - utter_solicitar
+  - utter_negar
+  - utter_confirmar
+  - utter_despedir
+  - utter_jogos
+  - utter_confirmar_pedido
+  - utter_selecionar
+  - action_jogos
+slots:
+  jogo:
+    type: text
+  num_na_lista:
+    type: text
+
+responses:
+  utter_saudar:
+  - text: "Ola, seja bem vindo ao gameX, em que posso ajudar?"
+
+  utter_solicitar:
+  - text: "Para eu encontrar o {jogo} que voce esta procurando, eu irei lhe passar uma lista
+           e voce me informa em qual posição da lista ele esta"
+
+  utter_jogos:
+  - text: "Aqui esta nossa lista de jogos:
+          1 - God of war,
+          2 - God of war 2,
+          3 - God of war 3,
+          4 - Assasins creed,
+          5 - Life is strange,
+          6 - Far cry,
+          7 - The witcher,
+          8 - Shadow of the Colossus,
+          9 - Fifa 20,
+          10 - Pes 2020,
+          11 - Forza Horizon,
+          12 - NFL,"
+
+  utter_confirmar:
+    - text: "Okay, seu pedido ja esta confirmado"
+
+  utter_negar:
+    - text: "O que mais voce deseja?"
+
+  utter_despedir:
+    - text: "Até a próxima"
+
+  utter_confirmar_pedido:
+    - text: "Posso confirmar o seu pedido, que é o número {num_na_lista} na lista?"
+
+  utter_selecionar:
+    - text: "Informe o jogo de sua preferencia pelo numero que ele esta na lista"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
