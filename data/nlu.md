@@ -14,6 +14,7 @@
 - gostaria de comprar [pes 2020](jogo)
 -  voces tem [guitar hero](jogo)?
 - quero comprar [resident evil 2](jogo)
+- quero [jogo](jogo)
 
 ## intent: negar
 - não
@@ -21,6 +22,7 @@
 - ainda não
 - negativo
 - discordo
+- nada
 
 ## intent: confirmar
 - claro que sim
@@ -36,8 +38,17 @@
 - valeu
 
 ## intent: confirmar_pedido
-- [1](num_na_lista) 
-- [2](num_na_lista)
-- [3](num_na_lista)
-- [4](num_na_lista)
-- [5](num_na_lista)
+- [God of war](jogo) 
+- [Life is strange](jogo)
+- [Far cry](jogo)
+- [Fifa 20](jogo)
+- [Pes 2020](jogo)
+
+## intent: jogo_nao_encontrado
+- não encontro o jogo que eu estou procurando
+- não encontrei o jogo
+- não tem o jogo
+- não achei o jogo que eu quero
+- não tem o [Starbucks game](jogo) na lista
+- não achei o [toy story 3](jogo) na lista
+- não tem o [Diablo 2](jogo)

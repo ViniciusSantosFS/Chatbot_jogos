@@ -5,6 +5,7 @@ intents:
   - confirmar
   - despedir
   - confirmar_pedido
+  - jogo_nao_encontrado
 entities:
   - jogo
   - num_na_lista
@@ -19,19 +20,20 @@ actions:
   - utter_confirmar_pedido
   - utter_selecionar
   - action_jogos
+  - utter_jogo_nao_encontrado
 slots:
   jogo:
-    type: text
+    type: unfeaturized
   num_na_lista:
-    type: text
+    type: unfeaturized
 
 responses:
   utter_saudar:
   - text: "Ola, seja bem vindo ao gameX, em que posso ajudar?"
 
   utter_solicitar:
-  - text: "Para eu encontrar o {jogo} que voce esta procurando, eu irei lhe passar uma lista
-           e voce me informa em qual posição da lista ele esta"
+  - text: "Para eu encontrar o jogo que voce esta procurando, eu irei lhe passar uma lista com os jogos que
+           possuimos no estoque e voce me informa se o jogo desejado esta nela"
 
   utter_jogos:
   - text: "Aqui esta nossa lista de jogos:
@@ -58,10 +60,18 @@ responses:
     - text: "Até a próxima"
 
   utter_confirmar_pedido:
-    - text: "Posso confirmar o seu pedido, que é o número {num_na_lista} na lista?"
+    - text: "Posso confirmar o seu pedido, que é o game {jogo} ?"
 
   utter_selecionar:
-    - text: "Informe o jogo de sua preferencia pelo numero que ele esta na lista"
+    - text: "Informe o nome do jogo de sua preferencia "
+
+  utter_jogo_nao_encontrado:
+    - text: "Que pena, mas não fique triste, nós estamos atualizando nossa loja constantemente, fique de olho
+            para quando o jogo de sua preferencia chegar, voce não perder a oportunidade de compra-lo"
+
+forms:
+  - jogoForm
+
 
 session_config:
   session_expiration_time: 60
