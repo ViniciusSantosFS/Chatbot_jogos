@@ -23,7 +23,7 @@ class jogoForm(FormAction):
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
-                "jogo": [self.from_intent(intent = "Solicitar")],
+                "jogo": [self.from_intent(intent = "selecionar")],
                 #"num_na_lista": [self.from_entity(entity = "num_na_lista")]
         }
     def submit(self,

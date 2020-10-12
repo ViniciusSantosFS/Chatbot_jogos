@@ -43,6 +43,7 @@
 - [Far cry](jogo)
 - [Fifa 20](jogo)
 - [Pes 2020](jogo)
+- [God of War 3](jogo)
 
 ## intent: jogo_nao_encontrado
 - não encontro o jogo que eu estou procurando
