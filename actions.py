@@ -23,16 +23,41 @@ class jogoForm(FormAction):
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
-                "jogo": [self.from_intent(intent = "selecionar")],
-                #"num_na_lista": [self.from_entity(entity = "num_na_lista")]
+                "jogo": [#self.from_intent(intent = "confirmar_pedido", value = True),
+                         #self.from_intent(intent = "solicitar", value = True),
+                         self.from_entity(entity= "jogo")]
         }
     def submit(self,
                dispatcher:CollectingDispatcher,
                tracker: Tracker,
                doamin: Dict[Text, Any]) -> List[Dict]:
 
-        dispatcher.utter_message("Obrigado, ótimo trabalho!")
+        dispatcher.utter_message("")
         return[]
+
+
+class nomeForm(FormAction):
+    def name(self):
+        return "nomeForm"
+
+    @staticmethod
+    def required_slots(tracker):
+        return ["nome"]
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return {
+                "nome": [self.from_intent(intent = "nome", value = True),
+                         self.from_entity(entity= "nome")]
+
+        }
+    def submit(self,
+               dispatcher:CollectingDispatcher,
+               tracker: Tracker,
+               doamin: Dict[Text, Any]) -> List[Dict]:
+
+        dispatcher.utter_message("")
+        return[]
+
 
 
 #class Actionjogos(Action):

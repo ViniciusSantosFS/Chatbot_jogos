@@ -6,10 +6,10 @@ intents:
   - despedir
   - confirmar_pedido
   - jogo_nao_encontrado
+  - nome
 entities:
   - jogo
-  - num_na_lista
-
+  - nome
 actions:
   - utter_saudar
   - utter_solicitar
@@ -21,15 +21,20 @@ actions:
   - utter_selecionar
   - action_jogos
   - utter_jogo_nao_encontrado
+  - utter_nome
+
 slots:
   jogo:
     type: unfeaturized
-  num_na_lista:
+  nome:
     type: unfeaturized
 
 responses:
   utter_saudar:
-  - text: "Ola, seja bem vindo ao gameX, em que posso ajudar?"
+  - text: "Ola, seja bem vindo ao gameX,antes de começarmos me informe o seu nome"
+
+  utter_nome:
+    - text: "Muito bem {nome}, em que posso ajudar?"
 
   utter_solicitar:
   - text: "Para eu encontrar o jogo que voce esta procurando, eu irei lhe passar uma lista com os jogos que
@@ -71,7 +76,7 @@ responses:
 
 forms:
   - jogoForm
-
+  - nomeForm
 
 session_config:
   session_expiration_time: 60

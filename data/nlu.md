@@ -5,6 +5,16 @@
 - Boa noite
 - Ola
 
+## nome
+- meu nome é [Vinicius](nome)
+- [João](nome)
+- Ola, meu nome é [Lucas](nome)
+- [João Vitor](nome)
+- [gabriel](nome)
+- meu nome é [Lucas henrique](nome)
+- [Jean](nome)
+- [Douglas](nome)
+
 ## intent: solicitar
 - gostaria de ver os [jogos](jogo)
 - tem [god of war 2](jogo)?
@@ -15,7 +25,8 @@
 -  voces tem [guitar hero](jogo)?
 - quero comprar [resident evil 2](jogo)
 - quero [jogo](jogo)
-
+- quero [NFL](jogo)
+- [NBA](jogo)
 ## intent: negar
 - não
 - de jeito nenhum
@@ -44,6 +55,8 @@
 - [Fifa 20](jogo)
 - [Pes 2020](jogo)
 - [God of War 3](jogo)
+- [NFL](jogo)
+- [NBA](jogo)
 
 ## intent: jogo_nao_encontrado
 - não encontro o jogo que eu estou procurando

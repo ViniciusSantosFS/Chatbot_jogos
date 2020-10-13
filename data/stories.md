@@ -1,6 +1,10 @@
 ## saudar + solicitar +confirmar
 * saudar
-  - utter_saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
@@ -8,7 +12,6 @@
     - jogoForm  
     - form{"name":"jogoForm"}
     - form{"name":null} 
-* confirmar_pedido
     - utter_confirmar_pedido
 *confirmar
     - utter_confirmar
@@ -16,14 +19,17 @@
     
 ## saudar+ solicitar + negar
 * saudar
-  - utter_saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
     - utter_selecionar
     - jogoForm  
     - form{"name":"jogoForm"}
-* confirmar_pedido
     * negar
     - utter_negar
 * solicitar
@@ -32,13 +38,18 @@
     - utter_selecionar
     - jogoForm
     - form{"name":"null"}
-* confirmar_pedido
     - utter_confirmar_pedido
 *confirmar
     - utter_confirmar
     - utter_despedir
     
 ## pedido+confirmar
+* saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
@@ -46,7 +57,6 @@
     - jogoForm  
     - form{"name":"jogoForm"}
     - form{"name":null} 
-* confirmar_pedido
     - utter_confirmar_pedido
 *confirmar
     - utter_confirmar
@@ -54,13 +64,19 @@
     
     
 ## solicitar + negar
+* saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
     - utter_selecionar
     - jogoForm  
-    - form{"name":"jogoForm"} 
-* confirmar_pedido
+    - form{"name":"jogoForm"}
+    - utter_confirmar_pedido 
 * negar
     - utter_negar
 * solicitar
@@ -69,40 +85,44 @@
     - utter_selecionar
     - jogoForm
     - form{"name":"null"}
-* confirmar_pedido
     - utter_confirmar_pedido
 *confirmar
     - utter_confirmar
     - utter_despedir
  
  ## despedir
+* saudar
+ - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * despedir
     - utter_despedir
 
 ## saudar+ despedir
 * saudar
-  - utter_saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * despedir
     - utter_despedir
     
 ## saudar+pedido+negar+negar
-* saudar
-  - utter_saudar
-* solicitar
-    - utter_solicitar
-    - utter_jogos
-    - utter_selecionar
-    - jogoForm  
-    - form{"name":"jogoForm"}
-    - form{"name":null} 
-* confirmar_pedido
-    - utter_confirmar_pedido
 * negar
     - utter_negar
 * negar
     - utter_despedir
  
 ## negar+negar
+* saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * negar
     - utter_negar
 * negar
@@ -111,18 +131,29 @@
    
 ## jogo não encontrado
 * saudar
-  - utter_saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
     - utter_selecionar
+    - jogoForm  
+    - form{"name":"jogoForm"} 
+    - form{"name":null}
 *jogo_nao_encontrado
     - utter_jogo_nao_encontrado
     - utter_despedir
     
 ## jogo confirmar+ não+ não encontrado
 * saudar
-  - utter_saudar
+    - utter_saudar
+    - nomeForm
+    - form{"name":"nomeForm"}
+    - form{"name":null}
+    - utter_nome
 * solicitar
     - utter_solicitar
     - utter_jogos
@@ -130,10 +161,22 @@
     - jogoForm  
     - form{"name":"jogoForm"}
     - form{"name":null} 
-* confirmar_pedido
     - utter_confirmar_pedido
 * negar
     - utter_negar
 *jogo_nao_encontrado
     - utter_jogo_nao_encontrado
+    - utter_despedir
+    
+## solicitar+comprar
+* solicitar
+    - utter_solicitar
+    - utter_jogos
+    - utter_selecionar
+    - jogoForm  
+    - form{"name":"jogoForm"}
+    - form{"name":null} 
+    - utter_confirmar_pedido
+*confirmar
+    - utter_confirmar
     - utter_despedir
